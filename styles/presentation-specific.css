@@ -5,3 +5,30 @@
 .title {
     line-height: 3em;
 }
+
+.car-drive {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(-50%, -50%) rotate(20deg);
+    height: 10%;
+}
+
+.shower.full .car-drive {
+    animation: drive 5s infinite;
+}
+
+@keyframes drive {
+    0% {
+        bottom: 0;
+        right: 0;
+    }
+    50% {
+        bottom: 0;
+        right: 0;
+    }
+    100% {
+        bottom: 63%;
+        right: 100%;
+    }
+}

@@ -100,7 +100,7 @@ header .venue {
     fill: black;
 }
 
-.shower > .badge a {
+.shower > .badge a:not(.pure) {
     margin: 0;
 }
 
