@@ -15,7 +15,7 @@
 }
 
 .shower.full .car-drive {
-    animation: drive 5s infinite;
+    animation: drive 10s infinite;
 }
 
 @keyframes drive {
@@ -23,12 +23,27 @@
         bottom: 0;
         right: 0;
     }
-    50% {
+    20% {
         bottom: 0;
         right: 0;
     }
-    100% {
+    80% {
         bottom: 63%;
         right: 100%;
+        opacity: 1;
+    }
+    80.01% {
+        opacity: 0;
+    }
+    80.02% {
+        bottom: -10%;
+        right: -20%;
+    }
+    80.03% {
+        opacity: 1;
+    }
+    100% {
+        bottom: 0;
+        right: 0;
     }
 }

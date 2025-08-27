@@ -53,10 +53,7 @@
         <li><h3>The Need</h3></li>
         <li><h3>High level Architecture</h3></li>
         <li><h3>Interoperability & Reuse</h3></li>
-        <li><h3>Implement ADJUST function</h3></li>
-        <li><h3>Implement CONSTRUCT QUAD queries</h3></li>
-        <li><h3>Implement Full test search</h3>
-        <li><h3>Drop OPTIONAL</h3></li>
+        <li><h3>Demo</h3></li>
         <li><h3>Conclusion</h3></li>
     </ul>
     <span class="place bottom right num"></span>
@@ -88,7 +85,7 @@
         - not yet modular.
     </div>
 
-    <img src="img/parse-and-lex.svg" style="width: 100%;">
+    <object type="image/svg+xml" data="img/parse-and-lex-flat.svg"></object>
 
     <span class="place bottom right num"></span>
 </section>
@@ -96,7 +93,7 @@
 <section id="lexer" class="slide" style="display: flex; flex-direction: column" rel="schema:hasPart" resource="#decentralized-envs">
     <h2 property="schema:name">Constructing a simple lexer builder</h2>
     <!-- We use the builder pattern, allowing us to combine the various grammar rules together -->
-    <iframe frameborder="0" scrolling="no" style="width:100%; height:310px;" allow="clipboard-write" src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fcomunica%2Ftraqula%2Fblob%2Fmain%2Fpackages%2Frules-sparql-1-1%2Flib%2Flexer%2Fgraph.ts%23L4-L14&style=default&type=code&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></iframe>
+    <iframe frameborder="0" scrolling="no" style="width:100%; height:307px;" allow="clipboard-write" src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fjitsedesmet%2F2025-semdev-demo%2Fblob%2Fmain%2Fengines%2Fparser-sparql-1-1-no-optional%2Flib%2FdemoLexer.ts%23L13-L23&style=default&type=code&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></iframe>
 
     <div style="position: absolute; width: 15%; bottom: 20px; left: 20px;
     line-height: 1; font-size: 0.5em;">
@@ -105,6 +102,10 @@
             &#169; refactoring.guru
         </a>
     </div>
+
+    <object type="image/svg+xml" data="img/parse-and-lex-short.svg"
+            style="height: 18%; margin: auto 0 20px 0"></object>
+
     <span class="place bottom right num"></span>
 </section>
 
@@ -142,7 +143,7 @@
     <h2 property="schema:name">Interoperability & Reuse</h2>
     <div>
         <a class="pure" href="https://lerna.js.org/"><img src="https://lerna.js.org/images/lerna-logo-dark.svg" style="height: 1.5em; transform: translate(0, 20%)"/></a>
-        We use modular packaging - splitting the code in modular packages
+        We avoid big monolith using modular packaging
     </div>
     <div>
         <span style="height: 1.5em">🆓</span> Using MIT software license
@@ -160,7 +161,26 @@
 
 <section id="demo" class="slide" style="display: flex; flex-direction: column" rel="schema:hasPart" resource="#decentralized-envs">
     <h2 property="schema:name">Demo</h2>
-    <div style="align-self: center; font-size: 200px; margin: auto">🤹</div>
+    <div style="display: grid; grid-template-columns: 1fr 2fr">
+        <ol>
+            <li><a href="https://github.com/jitsedesmet/2025-semdev-demo/tree/main/engines/parser-sparql-1-1-adjust">Add ADJUST</a></li>
+            <li><a href="https://github.com/jitsedesmet/2025-semdev-demo/tree/main/engines/parser-sparql-1-1-construct-quad">Add Construct Quad</a></li>
+            <li><a href="https://github.com/jitsedesmet/2025-semdev-demo/tree/main/engines/parser-sparql-1-1-full-text-search">Add full text search</a></li>
+            <li><a href="https://github.com/jitsedesmet/2025-semdev-demo/tree/main/engines/parser-sparql-1-1-no-optional">Drop complex optional</a></li>
+        </ol>
+        <div style="align-self: center; font-size: 200px; margin: auto">🤹</div>
+    </div>
+    <span class="place bottom right num"></span>
+</section>
+
+<section id="additional" class="slide" style="display: flex; flex-direction: column" rel="schema:hasPart" resource="#decentralized-envs">
+    <h2 property="schema:name" class="shout">Additional</h2>
+    <span class="place bottom right num"></span>
+</section>
+
+<section id="complete-parser-workflow-sparql" class="slide" style="display: flex; flex-direction: column" rel="schema:hasPart" resource="#decentralized-envs">
+    <h2 property="schema:name">Complete SPARQL flow</h2>
+    <object type="image/svg+xml" data="img/parse-and-lex-full.svg" style="height: 80%"></object>
     <span class="place bottom right num"></span>
 </section>
 
