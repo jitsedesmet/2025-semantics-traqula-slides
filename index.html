@@ -182,16 +182,9 @@
     <span class="place bottom right num"></span>
 </section>
 
-<section id="adjust-lex" class="slide" style="display: flex; flex-direction: column" rel="schema:hasPart" resource="#decentralized-envs">
-    <iframe frameborder="0" scrolling="no" style="width:100%; height:139px;" allow="clipboard-write" src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fjitsedesmet%2F2025-semdev-demo%2Fblob%2Fmain%2Fpackages%2Frules-sparql-1-1-adjust%2Flib%2Flexer.ts%23L2-L4&style=default&type=code&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></iframe>
-    <iframe frameborder="0" scrolling="no" style="width:100%; height:97px;" allow="clipboard-write" src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fjitsedesmet%2F2025-semdev-demo%2Fblob%2Fmain%2Fpackages%2Frules-sparql-1-1-adjust%2Flib%2Fgrammar.ts%23L5&style=default&type=code&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></iframe>
-    <iframe frameborder="0" scrolling="no" style="width:100%; height:370px;" allow="clipboard-write" src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fjitsedesmet%2F2025-semdev-demo%2Fblob%2Fmain%2Fengines%2Fparser-sparql-1-1-adjust%2Flib%2FParser.ts%23L7-L20&style=default&type=code&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></iframe>
-    <span class="place bottom right num"></span>
-</section>
-
 <section id="adjust-query" class="slide" style="display: flex; flex-direction: column" rel="schema:hasPart" resource="#decentralized-envs">
     <h2 property="schema:name">Builtin Adjust Query</h2>
-<pre><code>
+    <pre><code>
 SELECT ?s ?p (ADJUST(
     ?o,
     "-PT10H"^^&lt;http://www.w3.org/2001/XMLSchema#dayTimeDuration&gt;
@@ -201,8 +194,21 @@ SELECT ?s ?p (ADJUST(
     <span class="place bottom right num"></span>
 </section>
 
+<section id="adjust-lex" class="slide" style="display: flex; flex-direction: column" rel="schema:hasPart" resource="#decentralized-envs">
+    <iframe frameborder="0" scrolling="no" style="width:100%; height:139px;" allow="clipboard-write" src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fjitsedesmet%2F2025-semdev-demo%2Fblob%2Fmain%2Fpackages%2Frules-sparql-1-1-adjust%2Flib%2Flexer.ts%23L2-L4&style=default&type=code&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></iframe>
+    <iframe frameborder="0" scrolling="no" style="width:100%; height:97px;" allow="clipboard-write" src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fjitsedesmet%2F2025-semdev-demo%2Fblob%2Fmain%2Fpackages%2Frules-sparql-1-1-adjust%2Flib%2Fgrammar.ts%23L5&style=default&type=code&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></iframe>
+    <iframe frameborder="0" scrolling="no" style="width:100%; height:370px;" allow="clipboard-write" src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fjitsedesmet%2F2025-semdev-demo%2Fblob%2Fmain%2Fengines%2Fparser-sparql-1-1-adjust%2Flib%2FParser.ts%23L7-L20&style=default&type=code&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></iframe>
+    <span class="place bottom right num"></span>
+</section>
+
 <section id="construct-start" class="slide" style="display: flex; flex-direction: column" rel="schema:hasPart" resource="#decentralized-envs">
     <h2 property="schema:name" class="shout">Construct Quad</h2>
+    <span class="place bottom right num"></span>
+</section>
+
+<section id="construct-query" class="slide" style="display: flex; flex-direction: column" rel="schema:hasPart" resource="#decentralized-envs">
+    <h2 property="schema:name">Construct Quad Query</h2>
+    <pre><code>CONSTRUCT WHERE { GRAPH &lt;wow&gt; { ?s ?p ?o } }</code></pre>
     <span class="place bottom right num"></span>
 </section>
 
@@ -216,14 +222,16 @@ SELECT ?s ?p (ADJUST(
     <span class="place bottom right num"></span>
 </section>
 
-<section id="construct-query" class="slide" style="display: flex; flex-direction: column" rel="schema:hasPart" resource="#decentralized-envs">
-    <h2 property="schema:name">Construct Quad Query</h2>
-    <pre><code>CONSTRUCT WHERE { GRAPH &lt;wow&gt; { ?s ?p ?o } }</code></pre>
+<section id="text-search-start" class="slide" style="display: flex; flex-direction: column" rel="schema:hasPart" resource="#decentralized-envs">
+    <h2 property="schema:name" class="shout">Text Search</h2>
     <span class="place bottom right num"></span>
 </section>
 
-<section id="text-search-start" class="slide" style="display: flex; flex-direction: column" rel="schema:hasPart" resource="#decentralized-envs">
-    <h2 property="schema:name" class="shout">Text Search</h2>
+<section id="text-search-query" class="slide" style="display: flex; flex-direction: column" rel="schema:hasPart" resource="#decentralized-envs">
+    <h2 property="schema:name">Text Search Query</h2>
+    <pre><code>SELECT * WHERE {
+  ?s ?p ?o OPTION (score ?sc)
+}</code></pre>
     <span class="place bottom right num"></span>
 </section>
 
@@ -247,14 +255,6 @@ SELECT ?s ?p (ADJUST(
 
 <section id="text-search-builder" class="slide" style="display: flex; flex-direction: column" rel="schema:hasPart" resource="#decentralized-envs">
     <iframe frameborder="0" scrolling="no" style="width:100%; height:286px;" allow="clipboard-write" src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fjitsedesmet%2F2025-semdev-demo%2Fblob%2Fmain%2Fengines%2Fparser-sparql-1-1-full-text-search%2Flib%2FParser.ts%23L19-L28&style=default&type=code&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></iframe>
-    <span class="place bottom right num"></span>
-</section>
-
-<section id="text-search-query" class="slide" style="display: flex; flex-direction: column" rel="schema:hasPart" resource="#decentralized-envs">
-    <h2 property="schema:name">Text Search Query</h2>
-    <pre><code>SELECT * WHERE {
-  ?s ?p ?o OPTION (score ?sc)
-}</code></pre>
     <span class="place bottom right num"></span>
 </section>
 
